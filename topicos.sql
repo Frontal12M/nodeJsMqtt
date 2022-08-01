@@ -1,0 +1,15 @@
+drop database mydb;
+CREATE DATABASE mydb;
+USE mydb;
+
+CREATE TABLE topicos (
+   messageID INT NOT NULL AUTO_INCREMENT,
+   clientID VARCHAR(20) NOT NULL,
+   topic VARCHAR(50) NOT NULL,
+   message VARCHAR(100) NOT NULL,
+   Enable BOOLEAN DEFAULT 1,
+   DateTime_created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   PRIMARY KEY (messageID)
+);
+
+select * from topicos;
